@@ -96,28 +96,28 @@ void HLW8032::SerialReadLoop()
 
 float HLW8032::GetVol()
 {
-	float Vol = (VolPar / VolData) * VF;   
+	float Vol = ((double)VolPar / (double)VolData) * VF;  
 	return Vol;
 } 
 
 
 float HLW8032::GetVolAnalog()
 {
-	float Vol = VolPar / VolData;
+	float Vol = (double)VolPar / (double)VolData;
 	return Vol;
 }
 
 
 float HLW8032::GetCurrent()
 {
-	float Current = (CurrentPar / CurrentData) * CF;    
+	float Current = ((double)CurrentPar / (double)CurrentData) * CF;   
 	return Current;
 }
 
 
 float HLW8032::GetCurrentAnalog()
 {
-	float Current  = CurrentPar / CurrentData;
+	float Current  = (double)CurrentPar / (double)CurrentData;
 	return Current;
 }
 
@@ -125,7 +125,7 @@ float HLW8032::GetCurrentAnalog()
 
 float HLW8032::GetActivePower()
 {
-	float Power = (PowerPar/PowerData) * VF * CF;  
+	float Power = ((double)PowerPar/(double)PowerData) * VF * CF;  
 	return Power;
 }
 
